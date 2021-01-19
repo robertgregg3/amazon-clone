@@ -15,3 +15,32 @@
   padding: 10px;
   border-bottom: 1px solid #ccc;
 }
+
+.checkout__product {
+  display: flex;
+  margin: 20px 0;
+}
+
+.checkout__product-info {
+  padding-left: 20px;
+}
+
+.checkout__product-image {
+  object-fit: contain;
+  width: 180px;
+  height: 180px;
+}
+
+.checkout__product-title {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.checkout__product-price {
+}
+
+.checkout__product-rating {
+  display: flex;
+  color: #ffa41c;
+  font-size: 1.4rem;
+}
