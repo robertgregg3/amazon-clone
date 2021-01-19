@@ -19,7 +19,7 @@ function Product({ title, image, price, rating }) {
         </div>
       </div>
       <img src={image} alt="Book: Lean startup" />
-      <button>Add to Basket</button>
+      <button className="amazon-standard-button">Add to Basket</button>
     </div>
   );
 }
