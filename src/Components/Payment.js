@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../css/Payment.css";
 import CheckoutProduct from "./CheckoutProducts";
 import CurrencyFormat from "react-currency-format";
-import axios from "axios";
+import axios from "../axios";
 import { Link } from "react-router-dom";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { getBasketTotal } from "../Context/Reducer";
