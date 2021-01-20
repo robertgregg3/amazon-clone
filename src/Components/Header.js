@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import { ShoppingBasket } from "@material-ui/icons";
 import { useStateValue } from "./../Context/StateProvider";
-
-import "../css/Header.css";
 import { auth } from "../firebase";
+import "../css/Header.css";
 
 function Header() {
   const [{ basket, user }, dispatch] = useStateValue();
