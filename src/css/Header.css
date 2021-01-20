@@ -55,6 +55,7 @@
 .header__optionLineTwo {
   font-size: 14px;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .header__optionBasket {
