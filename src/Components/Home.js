@@ -21,14 +21,14 @@ function Home() {
           <Product
             id="1223233"
             title="The Lean Startup"
-            price="9.99"
+            price={9.99}
             image={LeanStartup}
             rating={5}
           />
           <Product
             id="1223633"
             title="Apple Watch"
-            price="169.99"
+            price={169.99}
             image={Apple}
             rating={4}
           />
@@ -37,21 +37,21 @@ function Home() {
           <Product
             id="1223299"
             title="Kenwood Mixer"
-            price="239.99"
+            price={239.99}
             image={Kenwood}
             rating={4}
           />
           <Product
             id="1223433"
             title="Amazon Echo Dot"
-            price="79.99"
+            price={79.99}
             image={Echo}
             rating={4}
           />
           <Product
             id="1223533"
             title="Apple Ipad"
-            price="399.99"
+            price={399.99}
             image={Ipad}
             rating={5}
           />
@@ -60,7 +60,7 @@ function Home() {
           <Product
             id="1223333"
             title="Samsung curved monitor"
-            price="199.99"
+            price={199.99}
             image={Samsung}
             rating={5}
           />

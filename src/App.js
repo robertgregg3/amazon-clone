@@ -13,15 +13,13 @@ function App() {
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
-      console.log("The user is >>>", authUser);
-
       if (authUser) {
         dispatch({ type: "SET_USER", user: authUser });
       } else {
         dispatch({ type: "SET_USER", user: null });
       }
     });
-  }, []);
+  }, [dispatch]);
 
   return (
     <Router>

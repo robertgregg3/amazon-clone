@@ -8,7 +8,7 @@ import { auth } from "../firebase";
 import "../css/Header.css";
 
 function Header() {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ basket, user }] = useStateValue();
 
   const handleSignInOut = () => {
     if (user) auth.signOut();
