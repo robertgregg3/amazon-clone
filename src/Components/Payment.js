@@ -8,6 +8,7 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { getBasketTotal } from "../Context/Reducer";
 import { useStateValue } from "./../Context/StateProvider";
 import { useHistory } from "react-router-dom";
+import { db } from "../firebase";
 
 function Payment() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -35,6 +36,7 @@ function Payment() {
   }, [basket]);
 
   console.log("the secret is", clientSecret);
+  console.log("Person", user);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -47,9 +49,23 @@ function Payment() {
         },
       })
       .then(({ paymentIntent }) => {
+        // send order to the db
+        db.collection("users") // find the collection called "users"
+          .doc(user?.uid) // add the user to the collection
+          .collection("orders") // find that users "orders" collection
+          .doc(paymentIntent.id) // add the payment id
+          .set({
+            // add the payment details
+            basket: basket,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created,
+          });
+
         setSucceeded(true);
         setError(null);
         setProcessing(false);
+
+        dispatch({ type: "EMPTY_BASKET" });
 
         history.replace("/orders");
       });
