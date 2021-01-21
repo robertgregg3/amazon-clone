@@ -117,7 +117,10 @@ function Payment() {
           </div>
           <div className="payment__details">
             <form onSubmit={handleSubmit}>
-              <CardElement onChange={handleChange} />
+              <CardElement
+                className="payment__cardDetails"
+                onChange={handleChange}
+              />
 
               <div className="payment__priceContainer">
                 <CurrencyFormat
@@ -134,7 +137,9 @@ function Payment() {
                   thousandSeparator={true}
                   prefix={"£"}
                 />
-                <button disabled={processing || disabled || succeeded}>
+                <button
+                  className="amazon-standard-button"
+                  disabled={processing || disabled || succeeded}>
                   <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                 </button>
               </div>
