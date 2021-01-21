@@ -18,7 +18,7 @@ function OrderHistory() {
           setOrders(
             snapshot.docs.map((doc) => ({
               id: doc.id,
-              data: doc.data,
+              data: doc.data(),
             }))
           )
         );

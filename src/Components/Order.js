@@ -22,7 +22,9 @@ function Order({ order }) {
         />
       ))}
       <CurrencyFormat
-        renderText={(value) => <h3>Order total: {value}</h3>}
+        renderText={(value) => (
+          <h3 className="order__total">Order total: {value}</h3>
+        )}
         decimalScale={2}
         value={order.data.amount / 100}
         displayType={"text"}
